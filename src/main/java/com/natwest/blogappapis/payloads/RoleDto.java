@@ -1,16 +1,7 @@
-package com.natwest.blogappapis.entities;
+package com.natwest.blogappapis.payloads;
 
-import lombok.Data;
+public class RoleDto {
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-public class Role {
-
-    @Id
     private int id;
     private String name;
 

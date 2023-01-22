@@ -1,10 +1,13 @@
 package com.natwest.blogappapis.payloads;
 
+import com.natwest.blogappapis.entities.Role;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.validation.constraints.*;
+import java.util.HashSet;
+import java.util.Set;
 
 //@NoArgsConstructor
 //@Getter
@@ -27,7 +30,17 @@ public class UserDto {
     @NotEmpty
     private String about;
 
+    private Set<RoleDto> roles = new HashSet<>();
+
     public UserDto() {
+    }
+
+    public Set<RoleDto> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<RoleDto> roles) {
+        this.roles = roles;
     }
 
     public int getId() {
